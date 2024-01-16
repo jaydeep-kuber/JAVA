@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class starP1 implements starP11 {
+public class starP1{
     public static void main(String[] args) {
         System.out.print("Enter the number of rows : ");
         Scanner sc = new Scanner(System.in);

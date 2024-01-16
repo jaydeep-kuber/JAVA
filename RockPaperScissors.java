@@ -1,15 +1,12 @@
 
 import java.util.Random;
 import java.util.Scanner;
-
-import javax.lang.model.util.ElementScanner14;
-
 public class RockPaperScissors {
 
     public static void main(String[] args) {
         int userScore = 0;
         int computerScore = 0;
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Random random = new Random();
 
         System.out.println("Let's play Rock Paper Scissors!");
@@ -18,7 +15,7 @@ public class RockPaperScissors {
         while (true) {
             // Get user's choice
             System.out.print("Enter your choice (rock, paper, scissors): ");
-            String userChoice = scanner.nextLine().toLowerCase();
+            String userChoice = sc.nextLine().toLowerCase();
 
             if (userChoice.equals("rock") || userChoice.equals("paper") || userChoice.equals("scissors")) {
 
@@ -55,7 +52,7 @@ public class RockPaperScissors {
 
                 // Ask if user wants to play again
                 System.out.print("Do you want to play again? (yes or no): ");
-                String playAgain = scanner.nextLine().toLowerCase();
+                String playAgain = sc.nextLine().toLowerCase();
                 if (!playAgain.equals("yes")) {
                     break;
                 }
@@ -64,6 +61,7 @@ public class RockPaperScissors {
                 System.out.println("Please Cheak your Input");
             }
         }
+        sc.close();
         // Show final score
         System.out.println("Final score: You - " + userScore + ", Computer - " + computerScore);
     }
